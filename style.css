@@ -1,0 +1,102 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+:root{
+    --Sec1Background:hsl(31, 77%, 52%);
+    --Sec2Background:hsl(184, 100%, 22%);
+    --Sec3Background:hsl(179, 100%, 13%);
+    --ParagraphBackground:hsla(0, 0%, 100%, 0.75);
+    --MainBackground:hsl(0, 0%, 95%);
+    --HeadingFontsize:'Big Shoulders Display', cursive;
+    --ParagraphFontsize:'Lexend Deca', sans-serif;
+}
+body{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+main{
+    width: 48em;
+    height: 20em;
+    margin: 1em;
+    background-color: black;
+    border-radius: 0.5em;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+}
+.sec1{
+    border-radius:0.5em 0 0 0.5em;
+    background-color: var(--Sec1Background,black);
+}
+.sec2{
+    background-color: var(--Sec2Background,black);
+}
+.sec3{
+    background-color: var(--Sec3Background,black);
+    border-radius:0 0.5em 0.5em 0;
+}
+.sec1,
+.sec2,
+.sec3{
+    padding: 2.5em;
+}
+.sec1 img,
+.sec2 img,
+.sec3 img{
+    width: 2.5em;
+    margin-bottom:1em;
+}
+p{
+    font-size: 0.78rem;
+    line-height: 1.5;
+    font-family: var(--ParagraphFontsize);
+    margin: 2em 0 5.5em;
+    color:var(--ParagraphBackground,black);
+}
+h1{
+    color: var(--MainBackground,black);
+    font-family: var(--HeadingFontsize);
+}
+button{
+    border: 0.128em solid var(--MainBackground,black);
+    padding: 0.8em 2em;
+    border-radius: 1.7em;
+    font-size: 0.78rem;
+    font-family: var(--ParagraphFontsize);
+    background-color: var(--MainBackground,black);
+    cursor: pointer;
+}
+.sec1 button{
+    color:var(--Sec1Background,black);
+}
+.sec2 button{
+    color: var(--Sec2Background,black);
+}
+.sec3 button{
+    color: var(--Sec3Background,black);;
+}
+button:hover{
+    color: var(--MainBackground,black);
+    background-color: transparent;
+}
+@media (max-width:47.93em) {
+    body{
+        align-items: flex-start;
+    }
+    main{
+        grid-template-columns: repeat(1,1fr);
+    }
+    .sec1{
+        border-radius:0.5em 0.5em 0 0;
+        -webkit-border-radius:0.5em 0.5em 0 0;
+}
+    .sec3{
+        border-radius:0 0 0.5em 0.5em;
+}
+    p{
+        margin-bottom: 2em;
+}
+}
